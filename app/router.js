@@ -13,6 +13,9 @@ import AddDeal from "./ownerScreens/AddDeal"
 import Deals from "./clientScreens/List";
 import Home from "./screens/Home";
 import Profile from "./screens/Profile";
+import DealRow from './clientScreens/DealRow';
+import DealDetails from './clientScreens/DealDetails';
+import AllDeals from './clientScreens/AllDeals';
 
 
 
@@ -96,9 +99,15 @@ export const SignedIn = TabNavigator({
 
 export const SignedIn = StackNavigator({
   Deals: {
-    screen: Deals,
+    screen: AllDeals,
     navigationOptions: {
       title: "Deals"
+    }
+  },
+  Deal: {
+    screen: DealDetails,
+    navigationOptions: {
+      title: "Deal"
     }
   },
   AddDeal: {
